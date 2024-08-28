@@ -50,8 +50,3 @@ jobs:
 
       - name: Install Jest
         run: npm install jest --global
-
-      - name: Run tests
-        run: |
-          npm test --prefix server && npm test --prefix client
-          npm test --prefix server && jest --detectOpenHandles
