@@ -36,6 +36,9 @@ jobs:
       - name: Install cross-env
         run: npm install cross-env
 
+      - name: Set execute permissions for cross-env
+        run: chmod +x ./node_modules/.bin/cross-env
+
       - name: Build client
         run: npm run build --prefix client
         shell: bash
