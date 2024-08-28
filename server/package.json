@@ -4,7 +4,7 @@
   "description": "NASA Mission Control API",
   "main": "src/server.js",
   "scripts": {
-    "test": "jest --detectOpenHandles",
+    "test": "jest ",
     "test-watch": "jest --watch",
     "watch": "cross-env PORT=5000 nodemon src/server.js",
     "start": "cross-env PORT=5000 node src/server.js",
@@ -25,6 +25,7 @@
     "express": "^4.19.2",
     "mongoose": "^8.5.2",
     "morgan": "^1.10.0",
+    "nasa-project": "file:..",
     "nasa-project-api": "file:",
     "pm2": "^5.4.2"
   },
