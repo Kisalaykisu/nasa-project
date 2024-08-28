@@ -29,6 +29,6 @@ To run any automated tests, run `npm test`. This will:
 - Run all the server-side tests: `npm test --prefix server`
 
 ## Architectural Diagram
-![Architectural diagram for the project](images/architectural-diagram.svg)
+![Architectural diagram for the project](https://raw.githubusercontent.com/JSulley/nasa-project/a8f3528f38bda501eb085018c63c55a69dd1231e/images/architectural-diagram.svg)
 
 Additionally, the application will be designed using the Model-View-Controller (MVC) pattern.
