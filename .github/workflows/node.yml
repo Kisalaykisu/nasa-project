@@ -1,18 +1,53 @@
 name: NASA Project CI
+
 on:
   push:
     branches: [master]
   pull_request:
     branches: [master]
+
 jobs:
   build:
-    runs-on: windows-latest
+    env:
+      CI: true
+      MONGO_URL: mongodb://localhost/nasa
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node-version: [14.x, 16.x, 20.x]
+        mongodb-version: ["4.4"]
+    runs-on: ${{ matrix.os }}
+
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js version 20
-        uses: actions/setup-node@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
         with:
-          node-version: "20"
-      - run: npm install
-      - run: npm install cross-env
-      - run: npm run build --prefix client
+          node-version: ${{ matrix.node-version }}
+
+      - name: Setup MongoDB ${{ matrix.mongodb-version }}
+        uses: supercharge/mongodb-github-action@1.6.0
+        with:
+          mongodb-version: ${{ matrix.mongodb-version }}
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Install cross-env
+        run: npm install cross-env
+
+      - name: Build Client (Windows)
+        if: runner.os == 'Windows'
+        run: |
+          cross-env BUILD_PATH=../server/public react-scripts build
+        working-directory: ./client
+
+      - name: Build Client (Linux and macOS)
+        if: runner.os != 'Windows'
+        run: |
+          npm run build --prefix client
+
+      - name: Run Tests
+        run: npm test
