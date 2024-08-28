@@ -1,6 +1,7 @@
 # NASA Mission Control Project
 
 Keep in mind that we recommend you code along with us and use this only if you ever get stuck or you don't like to code along.
+![NASA SpaceX Mission](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqSd29ktBRWbHdCUzaQ9S2x6kj3TKixWnPfg&s)
 
 ## Getting Started
 
@@ -26,3 +27,8 @@ To run any automated tests, run `npm test`. This will:
 
 - Run all the client-side tests: `npm test --prefix client`
 - Run all the server-side tests: `npm test --prefix server`
+
+## Architectural Diagram
+![Architectural diagram for the project](/images/architectural-diagram.svg)
+
+Additionally, the application will be designed using the Model-View-Controller (MVC) pattern.
