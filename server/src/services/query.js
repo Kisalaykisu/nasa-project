@@ -8,10 +8,10 @@ function getPagination(query) {
 
   return {
     skip,
-    limit,
+    limit
   };
 }
 
 module.exports = {
-  getPagination,
+  getPagination
 };

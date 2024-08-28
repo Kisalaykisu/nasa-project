@@ -6,15 +6,22 @@
   "scripts": {
     "install-server": "npm install --prefix server",
     "install-client": "npm install --prefix client",
-    "install": "npm run install-server && npm run install-client",
+    "installs": "npm install --prefix server && npm install --prefix client",
     "server": "npm run watch --prefix server",
     "client": "npm start --prefix client",
-    "watch": "npm run server & npm run client",
+    "watch": "concurrently \"npm run server\" \"npm run client\"",
     "deploy": "npm run build --prefix client && npm start --prefix server",
     "deploy-cluster": "npm run build --prefix client && npm run cluster --prefix server",
     "test": "npm test --prefix server && npm test --prefix client"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.5",
+    "concurrently": "^8.2.2",
+    "mongoose": "^8.5.4",
+    "morgan": "^1.10.0",
+    "nasa-project": "file:"
+  }
 }
