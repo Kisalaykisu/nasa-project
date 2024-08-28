@@ -29,6 +29,6 @@ To run any automated tests, run `npm test`. This will:
 - Run all the server-side tests: `npm test --prefix server`
 
 ## Architectural Diagram
-![Architectural diagram for the project](/images/architectural-diagram.svg)
+![Architectural diagram for the project](images/architectural-diagram.svg)
 
 Additionally, the application will be designed using the Model-View-Controller (MVC) pattern.
