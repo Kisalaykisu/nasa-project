@@ -25,7 +25,6 @@
     "express": "^4.19.2",
     "mongoose": "^8.5.2",
     "morgan": "^1.10.0",
-    "nasa-project": "file:..",
     "nasa-project-api": "file:",
     "pm2": "^5.4.2"
   },
