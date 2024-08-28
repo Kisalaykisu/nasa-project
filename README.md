@@ -12,7 +12,7 @@ Keep in mind that we recommend you code along with us and use this only if you e
 ## Running the Project
 
 1. In the terminal, run: `npm run deploy`
-2. Browse to the mission control frontend at [localhost:5000](http://localhost:5000) and schedule an interstellar launch!
+2. Browse to the mission control frontend at [localhost:8000](http://localhost:8000) and schedule an interstellar launch!
 
 ## Docker
 
