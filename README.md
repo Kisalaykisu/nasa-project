@@ -19,7 +19,7 @@ Keep in mind that we recommend you code along with us and use this only if you e
 
 1. Ensure you have the latest version of Docker installed
 2. Run `docker build -t nasa-project .`
-3. Run `docker run -it -p 5000:5000 nasa-project`
+3. Run `docker run -it -p 8000:8000 nasa-project`
 
 ## Running the Tests
 
