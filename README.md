@@ -1,6 +1,5 @@
 # NASA Mission Control Project
 
-Keep in mind that we recommend you code along with us and use this only if you ever get stuck or you don't like to code along.
 ![NASA SpaceX Mission](https://images.unsplash.com/photo-1711919711600-3f064b155796?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3BhY2V4fGVufDB8fDB8fHww)
 
 ## Getting Started
