@@ -24,6 +24,13 @@ jobs:
         uses: supercharge/mongodb-github-action@1.11.0
         with:
           mongodb-version: ${{ matrix.mongodb-version }}
-      - run: npm install
+
+      - run: npm ci
+
+      # Grant execute permissions for cross-env
+      - name: Grant execute permission for cross-env
+        run: chmod +x ./node_modules/.bin/cross-env
+
+      # - run: npm install
       - run: npm run build --prefix client
       - run: npm test
