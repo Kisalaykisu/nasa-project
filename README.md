@@ -1,6 +1,6 @@
 # NASA Mission Control Project
 
-Keep in mind that we recommend you code along with us and use this only if you ever get stuck or you don't like to code along.
+![NASA SpaceX Mission](https://images.unsplash.com/photo-1711919711600-3f064b155796?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3BhY2V4fGVufDB8fDB8fHww)
 
 ## Getting Started
 
@@ -18,7 +18,7 @@ Keep in mind that we recommend you code along with us and use this only if you e
 
 1. Ensure you have the latest version of Docker installed
 2. Run `docker build -t nasa-project .`
-3. Run `docker run -it -p 5000:5000 nasa-project`
+3. Run `docker run -it -p 8000:8000 nasa-project`
 
 ## Running the Tests
 
@@ -26,3 +26,8 @@ To run any automated tests, run `npm test`. This will:
 
 - Run all the client-side tests: `npm test --prefix client`
 - Run all the server-side tests: `npm test --prefix server`
+
+## Architectural Diagram
+![Architectural diagram for the project](https://raw.githubusercontent.com/JSulley/nasa-project/a8f3528f38bda501eb085018c63c55a69dd1231e/images/architectural-diagram.svg)
+
+Additionally, the application will be designed using the Model-View-Controller (MVC) pattern.
